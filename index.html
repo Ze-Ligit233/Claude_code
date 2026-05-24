@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro - Apple Style</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-blur"></div>
+
+    <main class="app-container">
+        <!-- 顶部状态栏：计数器 -->
+        <div class="status-bar">
+            <span class="pomodoro-count">🍅 <span id="count">0</span></span>
+            <button id="settings-btn" class="settings-icon">⚙️</button>
+        </div>
+
+        <!-- 模式切换 -->
+        <nav class="mode-selector">
+            <button class="mode-btn active" data-mode="focus">专注</button>
+            <button class="mode-btn" data-mode="short">短休</button>
+            <button class="mode-btn" data-mode="long">长休</button>
+        </nav>
+
+        <!-- 核心视觉 -->
+        <div class="timer-visual">
+            <svg class="progress-ring" width="300" height="300">
+                <circle class="progress-ring__circle-bg" stroke="#ffffff20" stroke-width="12" fill="transparent" r="130" cx="150" cy="150"/>
+                <circle class="progress-ring__circle" stroke="white" stroke-width="12" fill="transparent" r="130" cx="150" cy="150"/>
+            </svg>
+            <div class="timer-display">
+                <span id="time">25:00</span>
+            </div>
+        </div>
+
+        <!-- 控制按钮 -->
+        <div class="controls">
+            <button id="start-btn" class="main-btn">开始</button>
+            <button id="reset-btn" class="secondary-btn">重置</button>
+        </div>
+    </main>
+
+    <!-- 设置面板 (弹窗) -->
+    <div id="settings-modal" class="modal">
+        <div class="modal-content">
+            <h3>时间设置</h3>
+            <div class="setting-item">
+                <label>专注时长 (min)</label>
+                <input type="number" id="input-focus" value="25">
+            </div>
+            <div class="setting-item">
+                <label>短休时长 (min)</label>
+                <input type="number" id="input-short" value="5">
+            </div>
+            <div class="setting-item">
+                <label>长休时长 (min)</label>
+                <input type="number" id="input-long" value="15">
+            </div>
+            <button id="save-settings" class="main-btn" style="width: 100%; margin-top: 20px;">保存</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(command -v npm)",
+      "Bash(exit 1)",
+      "Bash(npm create *)",
+      "Bash(npm install *)",
+      "Bash(npx tailwindcss *)",
+      "Bash(rustc --version)",
+      "Bash(cargo --version)",
+      "Bash(mkdir -p \"D:/AI/ClaudeApp\")",
+      "Read(//d/AI/**)",
+      "Bash(npm init *)",
+      "Bash(npm run *)",
+      "Bash(npx electron-builder *)",
+      "Bash(./node_modules/.bin/electron-builder)",
+      "Bash(npx -y electron-builder build --win portable)",
+      "Bash(git config *)",
+      "Bash(git init *)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git branch *)",
+      "Bash(git push *)"
+    ]
+  }
+}
